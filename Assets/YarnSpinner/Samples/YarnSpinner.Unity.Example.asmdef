@@ -1,0 +1,28 @@
+{
+    "name": "YarnSpinner.Unity.Example",
+    "rootNamespace": "",
+    "references": [
+        "YarnSpinner.Unity",
+        "Unity.TextMeshPro",
+        "Unity.InputSystem",
+        "YarnSpinner",
+        "YarnSpinner.Compiler"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        ""
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.0.0",
+            "define": "USE_INPUTSYSTEM"
+        }
+    ],
+    "noEngineReferences": false
+}

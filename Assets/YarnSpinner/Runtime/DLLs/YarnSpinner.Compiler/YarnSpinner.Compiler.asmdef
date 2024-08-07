@@ -1,0 +1,22 @@
+{
+    "name": "YarnSpinner.Compiler",
+    "rootNamespace": "",
+    "references": [
+        "GUID:172c22f0c71594f05b9b65d6a43f9571"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Yarn.Antlr4.Runtime.Standard.dll",
+        "Yarn.Google.Protobuf.dll",
+        "Yarn.Microsoft.Extensions.FileSystemGlobbing.dll",
+        "Yarn.System.Text.Json.dll",
+        "Yarn.System.Memory.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

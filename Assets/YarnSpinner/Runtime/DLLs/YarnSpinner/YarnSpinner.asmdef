@@ -1,0 +1,19 @@
+{
+    "name": "YarnSpinner",
+    "rootNamespace": "",
+    "references": [
+        ""
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Yarn.Google.Protobuf.dll",
+        "Yarn.System.Memory.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,55 @@
+{
+    "startroom": "TestRoom",
+    "rooms": [
+        {
+            "id": "TestRoom",
+            "name": "Test Room",
+            "startsvisible": true,
+            "entrancenode": "TestRoom_Enter",
+            "background": "Backgrounds/emptyroom.png",
+            "icon": "Backgrounds/emptyroom.png",
+            "connectedrooms": [
+                "AnotherRoom"
+            ]
+        },
+        {
+            "id": "AnotherRoom",
+            "name": "Another Room",
+            "startsvisible": false,
+            "entrancenode": "AnotherRoom_Enter",
+            "background": "Backgrounds/emptyroom-2.png",
+            "icon": "Backgrounds/emptyroom-2.png",
+            "connectedrooms": [
+                "TestRoom"
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "id": "radio",
+            "visible": "true",
+            "room": "TestRoom",
+            "oninteract": "radioInteract",
+            "position": "(3, 3)",
+            "image": "Objects/radio.png"
+        }
+    ],
+    "pois": [
+    ],
+    "characters": [
+        {
+            "id": "gumshoe",
+            "name": "Gumshoe",
+            "oninteract": "gumshoeInteract",
+            "onpresent": "gumshoePresent"
+        }
+    ],
+    "items": [
+        {
+            "id": "radio",
+            "name": "Radio",
+            "description": "Gumshoe's long-lost radio, found in the abyss of Test Room.",
+            "icon": "Objects/radio.png"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "name": "AceV",
+    "rootNamespace": "",
+    "references": [
+        "GUID:172c22f0c71594f05b9b65d6a43f9571",
+        "GUID:41e68558f956442dbb6b6be377e0cea6",
+        "GUID:34aa492b82754644eac2f903cd496268",
+        "GUID:478a2357cc57436488a56e564b08d223",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:1e113d3b5d77bc04eab508251483e8ff",
+        "GUID:e539678cf69674b418d82e89c16a9753",
+        "GUID:9bf40d442462a4888a0aca00939fc9e6",
+        "GUID:c1bbdbeed3f894cccbe93457e445a445"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Yarn.Google.Protobuf.dll",
+        "DOTween.dll",
+        "DOTweenPro.dll",
+        "DemiLib.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

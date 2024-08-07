@@ -1,0 +1,26 @@
+﻿title: Intro
+tags:
+---
+<<FadeToBlack BlackScreen>>
+NONE: ...aaaaand, done!
+NONE: I put my sign up on nearly every downtown post:
+NONE: "Perry Issac: Attorney for hire!"
+NONE: Hmm... maybe I should've worked on that slogan.
+NONE: Well, all I need to do now is wait for a call to come in!
+NONE: I'm sure SOMEONE needs an Investigative Attorney in this city.
+NONE: The rate of vore-related offenses here in <color="Orange">Bastion</color> are very high, or so I've heard.
+NONE: I just hope I can get some kind of work here.
+
+<<wait 2>>
+NONE: A few days later...
+
+//<<FadeFromBlack BlackScreen>>
+Perry: Man... nothing yet..?
+NONE: *RING* *RING*
+Perry: OH! A call!
+NONE: *beep*
+Perry: H-hello? Perry Issac, investiga-//<<autocontinue>>
+???: HELP! Please! My friend has gone missing! No one's seen him in over a day!
+Perry: W-woah! I'm so sorry to hear, can you tell me where you last saw him?
+???: Meet me at Spearmint Park! My name is Felix!
+===

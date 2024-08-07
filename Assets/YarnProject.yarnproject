@@ -1,0 +1,10 @@
+{
+  "projectFileVersion": 2,
+  "sourceFiles": [],
+  "excludeFiles": [
+    "**/*~/*"
+  ],
+  "localisation": {},
+  "baseLanguage": "en-US",
+  "compilerOptions": {}
+}

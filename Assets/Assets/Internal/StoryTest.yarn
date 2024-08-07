@@ -1,0 +1,130 @@
+﻿title: declvars
+---
+<<declare $gumshoeOption1Read = false>>
+<<declare $gumshoeOption2Read = false>>
+<<declare $gumshoeHasRadio = false>>
+===
+
+title: TestRoom_Enter
+tags:
+---
+<<if visited("TestRoom_Enter") == false>>
+    <<RoomIntro "Test Room" "4:56PM">>
+    Player: Huh... a big empty room.
+    Player: The floor and walls look immaculate, streak and dust-free.
+    Player: I wonder who owns this place..?
+    <<EnterCharacter Gumshoe>>
+    <<ShakeScreen 2 0.125 0.125>>
+    Gumshoe: Boo!
+    Player: G-gahh!!!
+    Gumshoe: Woah, pal! Didn't mean to startle ya, #continue
+    <<ShakeScreen 1 0.25 0>>
+    Gumshoe: haha! #emotion:humor
+    Player: Well, don't sneak up on me like that!
+    Gumshoe: Oh... #emotion:neutral #continue
+    Gumshoe: sorry, pal.
+<<endif>>
+===
+
+
+title: radioInteract
+---
+Player: Something's on the ground behind Gumshoe... what's this..?
+You pick up the device.
+Gumshoe: Hey, there it is! #continue
+<<ShakeScreen 1 0.25 0>>
+That's mine! #emotion:neutral
+<<AddInventoryItem radio>>
+<<HideObject radio>>
+===
+
+
+title: gumshoePresent
+---
+<<if GetItemToPresent() == "radio">>
+    <<jump GumshoeItem_Radio>>
+<<endif>>
+===
+
+
+title: gumshoeInteract
+---
+-> Where Are We?<<if !($gumshoeOption1Read == true && $gumshoeOption2Read == true)>>
+    <<jump GumshoeOption1>>
+-> Where Are We? (cont.) <<if $gumshoeOption1Read == true && $gumshoeOption2Read == true>>
+    <<jump GumshoeOption1_2>>
+-> Escaping
+    <<jump GumshoeOption2>>
+-> The Radio <<if $gumshoeHasRadio == true>>
+    <<jump GumshoeOption3>>
+===
+
+
+title: GumshoeOption1
+---
+Player: So uh... any idea on how to get out of here?
+Gumshoe: Nope. Sorry pal, I can't say there is. #emotion:neutral
+Player: Can't... say..?
+Gumshoe: Nope.
+Player: Why not?
+Gumshoe: Because I haven't found a way out yet! #emotion:humor
+Player: Oh. Okay.
+<<set $gumshoeOption1Read = true>>
+===
+
+title: GumshoeOption1_2
+---
+Player: Hey, got any information on why that side of the room is dark?
+Gumshoe: No pal, not a clue! #emotion:neutral
+Gumshoe: Probably because they haven't paid the power bill! #emotion:humor
+Player: Haha, yeah..! #continue
+<<ShakeScreen 1 0.25 0>>
+Player: (Then why is this side of the room lit up?)
+===
+
+title: GumshoeOption2
+---
+Gumshoe: Say, pal... have you even looked around much yet?
+Player: Uh... no..?
+<<ShakeScreen  1 0.25 0>>
+Gumshoe: Hah! So much of a detective you are! #emotion:humor
+Player: (I'm an attorney... but okay.)
+Gumshoe: Anyways, I think I lost something nearby. #emotion:neutral
+Gumshoe: The "Investigate" button might be of some use to ya.
+Gumshoe: And there's also a dark side of this room behind you.
+Player: Behind me..?
+Gumshoe: Try going to it with the "Travel" button, pal! #emotion:humor
+<<set $gumshoeOption2Read = true>>
+<<UnlockRoom AnotherRoom>>
+===
+
+title: GumshoeOption3
+---
+Player: So uh, where'd you get this?
+Gumshoe: I bought this bad boy at Radio Shack. #emotion:neutral
+Gumshoe: I gotta take it back and get it fixed, though...
+Gumshoe: ...sometimes the AM signal cuts out.
+Gumshoe: It interrupts my talk radio time! #emotion:humor
+Player: Um, sorry to break it to you... but I don't think Radio Shack exists anymore.
+Gumshoe: Uh... what..? #emotion:neutral
+Gumshoe: Shoot, guess I gotta figure something else out then.
+===
+
+title: GumshoeItem_Radio
+---
+Gumshoe: Thanks for finding this, pal! #emotion:humor
+Gumshoe: I appreciate it. #emotion:neutral
+Player: Sure! Here you go.
+<<RemoveInventoryItem radio>>
+<<set $gumshoeHasRadio = true>>
+===
+
+title: AnotherRoom_Enter
+---
+<<if visited("AnotherRoom_Enter") == false>>
+    <<RoomIntro "Another Room" "5:00PM">>
+    The demo ends here. Sorry it wasn't much, this is mainly a testing scene.
+    Thanks for checking it out!
+    (Do me a favor, try breaking the game - click on things out of order, mid-animation, etc!)
+<<endif>>
+===
